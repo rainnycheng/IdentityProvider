@@ -4,6 +4,8 @@
 
 using IdentityServer4;
 using IdentityServer4.Quickstart.UI;
+using IdentityServer4.Services;
+using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -47,8 +49,8 @@ namespace IdentityProvider
                 options.Events.RaiseInformationEvents = true;
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseSuccessEvents = true;
-            })
-                .AddTestUsers(TestUsers.Users);
+            });
+               // .AddTestUsers(TestUsers.Users);
 
             // in-memory, code config
             builder.AddInMemoryIdentityResources(Config.Ids);
@@ -74,6 +76,13 @@ namespace IdentityProvider
                     options.ClientId = "copy client ID from Google here";
                     options.ClientSecret = "copy client secret from Google here";
                 });
+
+
+
+            services.AddTransient<IResourceOwnerPasswordValidator, Configs.ResourceOwnerPasswordValidator>();
+            services.AddTransient<IProfileService, Configs.ProfilesService>();
+
+
         }
 
         public void Configure(IApplicationBuilder app)

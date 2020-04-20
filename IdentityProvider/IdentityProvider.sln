@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider", "IdentityProvider.csproj", "{D55D40DF-A08B-40C4-B301-225174753C16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridClientMvc", "..\HybridClientMvc\HybridClientMvc.csproj", "{A9B3204A-3808-4056-8756-75D25965117B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D55D40DF-A08B-40C4-B301-225174753C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D55D40DF-A08B-40C4-B301-225174753C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D55D40DF-A08B-40C4-B301-225174753C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B3204A-3808-4056-8756-75D25965117B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B3204A-3808-4056-8756-75D25965117B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B3204A-3808-4056-8756-75D25965117B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B3204A-3808-4056-8756-75D25965117B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

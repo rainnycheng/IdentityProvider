@@ -14,6 +14,8 @@ namespace IdentityProvider
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResource("roles","角色",new List<string>{"role" }),
+                new IdentityResource("locations","地點",new List<string>{"location" })
             };
 
 
@@ -80,7 +82,31 @@ namespace IdentityProvider
                     AllowedCorsOrigins = { "http://localhost:5002" },
 
                     AllowedScopes = { "openid", "profile", "api1" }
+                },
+                //hybrid client
+                   new Client
+                {
+                    ClientId = "Hybrid client",
+                    ClientName = "Hybrid client",
+                   
+                    ClientSecrets =  {new  Secret( "Hybrid Secret".Sha256()) },
+                    AllowOfflineAccess = true,
+
+                    AllowedGrantTypes = GrantTypes.Hybrid,
+                 
+                    RedirectUris =
+                    {
+                        "http://localhost:7000/signin-oidc"
+                    },
+
+                    PostLogoutRedirectUris = { "http://localhost:7000/signout-callback-oidc" },               
+
+                    AllowedScopes = { "openid", "profile", "api1" ,"roles", "locations" },
+                    AlwaysIncludeUserClaimsInIdToken = true,
+                     
+
                 }
+
             };
     }
 }
