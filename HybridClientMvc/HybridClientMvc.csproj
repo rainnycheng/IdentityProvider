@@ -9,7 +9,7 @@
     <PackageReference Include="IdentityModel" Version="4.2.0" />
     <PackageReference Include="IdentityServer4" Version="3.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.34.0" />
   </ItemGroup>
 
 </Project>
